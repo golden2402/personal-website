@@ -1,0 +1,34 @@
+.projects {
+  display: flex;
+  flex-flow: column;
+  
+  margin: 30px;
+  margin-bottom: 0;
+}
+
+.projectCard {
+  display: flex;
+  flex-flow: row;
+}
+
+.projectCard #description {
+  flex: 3;
+}
+
+.projectCard #image {
+  flex: 2;
+}
+
+.projectCard #image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.projectCard img {
+  background-color: var(--background-color);
+  color: var(--color, black);
+
+  border-radius: 10px; 
+
+  box-shadow: 0 0 5px black;
+}
