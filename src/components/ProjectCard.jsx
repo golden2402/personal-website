@@ -4,8 +4,8 @@ function ProjectCard(params) {
   return (
     <div className={styles.projectCard}>
       <div id={styles.description}>
-        <h1>{params.name}</h1>
-        <h3>{params.skills.join(' ')}</h3>
+        <h2>{params.name}</h2>
+        <h4>{params.skills.join(', ')}</h4>
 
         <p>
           Stuff.

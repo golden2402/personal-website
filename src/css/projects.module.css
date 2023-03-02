@@ -32,3 +32,16 @@
 
   box-shadow: 0 0 5px black;
 }
+
+@media screen and (max-width: 1200px) {
+  .projects {
+    margin: 10px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projectCard #image {
+    display: none;
+  }
+}
