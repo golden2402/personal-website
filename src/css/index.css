@@ -1,6 +1,11 @@
 :root {
   --background-color: white; 
   --color: black;
+
+  --dark-background-color: black; 
+  --dark-color: white;
+
+  --section-padding: 50px;
 }
 
 html {
@@ -9,34 +14,47 @@ html {
 
 body, button { font-family: 'Quicksand', serif; }
 
-body, h1, h2, h3, h4 {
+body, h1, h2, h3, h4, p {
   margin: 0
 }
 
 a {
   text-decoration: none;
-  color: var(--color);
 }
 
 .title {
-  color: var(--color);
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+.title-small {
+  font-size: clamp(32px, 6vw, 60px);
 }
 
 .section {
-  margin: 0 300px;
+  padding: var(--section-padding) 150px;
+  margin: auto;
+  
+  max-width: 1000px;
   min-height: 100vh;
 }
 
 @media screen and (max-width: 1200px) {
   .section {
-    margin: 0 150px;
+    padding: var(--section-padding) 150px;
+  }
+  
+}
+
+@media screen and (max-width: 960px) {
+  .section {
+    padding: var(--section-padding) 75px;
   }
 
 }
 
 @media screen and (max-width: 480px) {
   .section {
-    margin: 0 50px;
-  }
-
+    padding: var(--section-padding) 50px;
+  } 
+  
 }

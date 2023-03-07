@@ -21,14 +21,12 @@ function HeroButton(params) {
   )
 }
 
-console.log(styles);
-
 function Hero() {
   return (
     <div className={styles.hero}>
       <div className={styles.wrapper}>
         <h1>hi, my name is</h1>
-        <h1 id={styles.name}>John Golden</h1>
+        <h1 className='title' id={styles.name}>John Golden</h1>
 
         <ul>
           {
