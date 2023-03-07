@@ -2,35 +2,55 @@
   display: flex;
   flex-flow: column;
   
-  margin: 30px;
+  margin: 10px;
   margin-bottom: 0;
 }
 
 .projectCard {
   display: flex;
   flex-flow: row;
+
+  /* wrt the ul of tools: <...> .toolList li */
+  margin-bottom: 15px;
 }
 
-.projectCard #description {
+.projectCard .info {
   flex: 3;
 }
 
-.projectCard #image {
-  flex: 2;
+.projectCard .info .textBox {
+  width: fit-content;
+  
+  /* distance from image, overwritten if column style: */
+  /* margin-right: 10px; */
+  margin-bottom: 5px;
+  padding: 5px; 
+
+  box-sizing: border-box;
+
+  box-shadow: 0 0 2px black;
 }
 
-.projectCard #image img {
-  max-width: 100%;
-  height: auto;
+.projectCard .info .textBox.title {
+  margin-bottom: 10px;
 }
 
-.projectCard img {
-  background-color: var(--background-color);
-  color: var(--color, black);
+.projectCard .info .toolList {
+  padding-left: 0;
+  margin: 0;
+  
+  list-style-type: none;
+}
 
-  border-radius: 10px; 
+.projectCard .info .toolList li {
+  display: inline-block;
+  
+  margin-bottom: 5px;
+  padding-right: 15px;
+}
 
-  box-shadow: 0 0 5px black;
+.projectCard .info .toolList li:last-child {
+  padding-right: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -40,8 +60,22 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .projectCard #image {
-    display: none;
+/* needs adjustment */
+@media screen and (max-width: 960px) {
+  .projects {
+    margin: 0;
+    margin-top: 10px;
   }
+  
+  .projectCard {
+    flex-flow: column;
+  }
+
+  .projectCard .info .textBox {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
 }
