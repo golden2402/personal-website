@@ -2,8 +2,11 @@
   --background-color: white; 
   --color: black;
 
-  --dark-background-color: black; 
-  --dark-color: white;
+  --dark-background-color: #0d1117; 
+  --dark-color: #c6cdd5;
+
+  /* misc. colors: */
+  --green: #7ce38b;
 
   --section-padding: 50px;
 }
@@ -12,7 +15,14 @@ html {
   scroll-behavior: smooth;
 }
 
-body, button { font-family: 'Quicksand', serif; }
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+body, button {
+  font-family: 'Quicksand', serif;
+}
 
 body, h1, h2, h3, h4, p {
   margin: 0
@@ -57,4 +67,11 @@ a {
     padding: var(--section-padding) 50px;
   } 
   
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--dark-background-color);
+    --color: var(--dark-color)
+  }
 }
